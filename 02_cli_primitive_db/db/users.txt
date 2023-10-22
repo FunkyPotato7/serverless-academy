@@ -1,0 +1,47 @@
+[
+  {
+    "user": "Mark",
+    "gender": "male",
+    "age": 2
+  },
+  {
+    "user": "Olya",
+    "gender": "male",
+    "age": 12
+  },
+  {
+    "user": "Andrew",
+    "gender": "male",
+    "age": 12
+  },
+  {
+    "user": "Guy",
+    "gender": "female",
+    "age": 20
+  },
+  {
+    "user": "Vika",
+    "gender": "female",
+    "age": 44
+  },
+  {
+    "user": "Vitalik",
+    "gender": "male",
+    "age": 30
+  },
+  {
+    "user": "Dsa",
+    "gender": "male",
+    "age": "11"
+  },
+  {
+    "user": "Peters",
+    "gender": "male",
+    "age": "34"
+  },
+  {
+    "user": "Some1",
+    "gender": "female",
+    "age": "16"
+  }
+]

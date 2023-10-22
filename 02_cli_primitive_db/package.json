@@ -1,0 +1,8 @@
+{
+  "name": "02_cli_primitive_db",
+  "type": "module",
+  "version": "1.0.0",
+  "dependencies": {
+    "inquirer": "^9.2.11"
+  }
+}
