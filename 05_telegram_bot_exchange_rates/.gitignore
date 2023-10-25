@@ -1,0 +1,4 @@
+.idea
+node_modules
+package-lock.json
+05_telegram_bot_exchange_rates.iml
