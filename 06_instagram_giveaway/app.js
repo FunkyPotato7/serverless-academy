@@ -12,19 +12,18 @@ const uniqueValues = () => {
             uniqueNames.add(word);
         }
     }
-
     return uniqueNames.size;
 }
 
 const existInAllFiles = () => {
     const files = fs.readdirSync('./files', 'utf8');
-    const newArr = [];
+    let newArr = [];
     let counter = 0;
 
     for (const file of files) {
         const data = fs.readFileSync(`./files/${file}`, 'utf8');
         const parsedData = data.split('\n');
-        newArr.push(...parsedData);
+        newArr.push(...Array.from(new Set(parsedData)));
     }
 
     newArr.reduce((accumulator, currentWord) => {
@@ -46,12 +45,12 @@ const existInAtLeastTen = () => {
     for (const file of files) {
         const data = fs.readFileSync(`./files/${file}`, 'utf8');
         const parsedData = data.split('\n');
-        newArr.push(...parsedData);
+        newArr.push(...Array.from(new Set(parsedData)));
     }
 
     newArr.reduce((accumulator, currentWord) => {
         accumulator[currentWord] = (accumulator[currentWord] || 0) + 1;
-        if (accumulator[currentWord] >= 10) {
+        if (accumulator[currentWord] === 10) {
             counter++;
         }
         return accumulator;
@@ -72,3 +71,4 @@ console.log('Exist In At Least Ten:');
 console.time('Ended in');
 console.log(existInAtLeastTen());
 console.timeEnd('Ended in');
+//129240, 441, та 73241
