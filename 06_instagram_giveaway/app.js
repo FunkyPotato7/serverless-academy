@@ -71,4 +71,3 @@ console.log('Exist In At Least Ten:');
 console.time('Ended in');
 console.log(existInAtLeastTen());
 console.timeEnd('Ended in');
-//129240, 441, та 73241
