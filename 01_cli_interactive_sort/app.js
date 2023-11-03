@@ -1,7 +1,9 @@
-const readline = require('readline').createInterface({
+import * as readline from 'readline';
+
+readline.createInterface({
     input: process.stdin,
-    output: process.stdout
-});
+    output: process.stdout,
+})
 
 const sortWordsAlphabetically = (arr) => {
     console.log(arr.filter(word => isNaN(Number(word))).sort());
