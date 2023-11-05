@@ -1,0 +1,5 @@
+.idea
+node_modules
+SLS_Auth_API.iml
+
+.env
