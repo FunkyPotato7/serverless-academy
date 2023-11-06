@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/getCountryInfo', (req, res) => {
-    const { ip } = req.body;
+    const { ip } = req;
     const location = tools.ipV4ToDecimal(ip);
 
     fs.readFile('IP2LOCATION-LITE-DB1.CSV', (err, data) => {
