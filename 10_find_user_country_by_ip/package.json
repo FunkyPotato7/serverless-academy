@@ -4,15 +4,18 @@
   "description": "",
   "main": "app.js",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FunkyPotato7/serverless-academy.git"
+  },
   "scripts": {
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Andrew Buno",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "geoip-lite": "^1.4.8",
     "ip2location-nodejs": "^9.6.0",
     "nodemon": "^3.0.1"
   }
