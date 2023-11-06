@@ -19,7 +19,9 @@ app.get('/getCountryInfo', (req, res) => {
          for (const arr of parsedData) {
              if (location >= Number(arr[0]) && location <= Number(arr[1])) {
                  res.status(200).json({
-                     range: `${arr[0]}-${arr[1]}`,
+                     ip,
+                     rangeStart: tools.decimalToIPV4(arr[0]),
+                     rangeEnd: tools.decimalToIPV4(arr[1]),
                      country: arr[3]
                  });
              }
