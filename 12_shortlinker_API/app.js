@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 const dataBase = {};
 
-app.post('/shortUrl', (req, res) => {
+app.post('/shortUrl', (req, res, next) => {
     try {
         const { url } = req.body;
 
@@ -30,11 +30,11 @@ app.post('/shortUrl', (req, res) => {
             shortURL,
         });
     } catch (e) {
-        res.status(e.status).json(e);
+        next(e);
     }
 });
 
-app.get('/:shortUrl', (req, res) => {
+app.get('/:shortUrl', (req, res, next) => {
     try {
         const { shortUrl } = req.params;
         const url = dataBase[shortUrl];
@@ -45,7 +45,7 @@ app.get('/:shortUrl', (req, res) => {
 
         res.redirect(url);
     } catch (e) {
-        res.status(e.status).json(e);
+        next(e);
     }
 });
 
