@@ -1,3 +1,1 @@
-module.exports = {
-    authValidator: require('./auth.validator'),
-}
+export * from './auth.validator.js';

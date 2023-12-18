@@ -1,6 +1,6 @@
-const { userService } = require('../services');
+import { userService } from '../services/index.js';
 
-module.exports = {
+const userController = {
     getOneById: async (req, res, next) => {
         try {
             const { id } = req;
@@ -17,4 +17,8 @@ module.exports = {
             next(e);
         }
     }
-}
+};
+
+export {
+    userController,
+};

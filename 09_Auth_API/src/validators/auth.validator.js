@@ -1,8 +1,12 @@
-const Joi = require('joi');
+import Joi from  'joi';
 
-const { EMAIL, PASSWORD } = require('../enums/regexp.enum');
+import { EMAIL, PASSWORD } from  '../enums/regexp.enum.js';
 
-module.exports = Joi.object({
+const authValidator = Joi.object({
     email: Joi.string().regex(EMAIL).trim().lowercase().required(),
     password: Joi.string().regex(PASSWORD).trim().required()
 });
+
+export {
+    authValidator,
+};

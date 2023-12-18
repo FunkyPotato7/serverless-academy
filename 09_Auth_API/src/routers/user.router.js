@@ -1,8 +1,10 @@
-const router = require('express').Router();
+import express from "express";
 
-const { userController } = require('../controllers');
-const { authMiddleware } = require('../middlwares');
+const router = express.Router();
+
+import { userController } from '../controllers/index.js';
+import { authMiddleware } from '../middlwares/index.js';
 
 router.get('/', authMiddleware.checkAccessToken, userController.getOneById);
 
-module.exports = router;
+export default router;

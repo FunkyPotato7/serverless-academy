@@ -1,9 +1,9 @@
-const { userService, authService } = require('../services');
-const { authHelper } = require('../helpers');
-const { authValidator } = require('../validators');
-const APIError = require('../errors/APIError');
+import { userService, authService } from '../services/index.js';
+import { authHelper } from '../helpers/index.js';
+import { authValidator } from '../validators/index.js';
+import { APIError } from '../errors/APIError.js';
 
-module.exports = {
+const authMiddleware = {
     checkSignUpBody: async (req, res, next) => {
         try {
             const { error, value } = await authValidator.validate(req.body);
@@ -34,6 +34,7 @@ module.exports = {
             }
 
             const user = await userService.getOne(value.email);
+            console.log(user);
             if (!user) {
                 throw new APIError('Wrong email or password', 400);
             }
@@ -66,4 +67,8 @@ module.exports = {
             next(e);
         }
     }
-}
+};
+
+export {
+    authMiddleware,
+};

@@ -1,7 +1,7 @@
-const { userService, authService } = require('../services');
-const { authHelper } = require('../helpers');
+import { userService, authService } from  '../services/index.js';
+import { authHelper } from '../helpers/index.js';
 
-module.exports = {
+const authController = {
     signUp: async (req, res, next) => {
         try {
             const { email, password } = req.body;
@@ -40,4 +40,8 @@ module.exports = {
             next(e);
         }
     }
-}
+};
+
+export {
+    authController,
+};

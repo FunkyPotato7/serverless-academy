@@ -1,4 +1,2 @@
-module.exports = {
-    authService: require('./auth.service'),
-    userService: require('./user.service'),
-}
+export * from './auth.service.js';
+export * from './user.service.js';

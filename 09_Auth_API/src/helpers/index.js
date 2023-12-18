@@ -1,3 +1,1 @@
-module.exports = {
-    authHelper: require('./auth.helper'),
-}
+export * from './auth.helper.js';

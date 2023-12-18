@@ -1,7 +1,12 @@
-const express = require('express');
-require('dotenv').config();
+import express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const { userRouter, authRouter } = require('./routers');
+import authRouter from "./routers/auth.router.js";
+import userRouter from "./routers/user.router.js";
+
+//WOW WHAT IS THAT
+//import { authRouter, userRouter } from './routers/index.js';
 
 const app = express();
 
@@ -18,3 +23,7 @@ app.use((err, req, res, next) => {
 app.listen(process.env.PORT, () => {
     console.log(`Server listen on ${process.env.PORT}`);
 });
+
+//TEST
+//TEST
+//TEST

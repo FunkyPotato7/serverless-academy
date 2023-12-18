@@ -1,4 +1,2 @@
-module.exports = {
-    access: 'accessToken',
-    refresh: 'refreshToken',
-}
+export const access = 'accessToken';
+export const refresh = 'refreshToken';
