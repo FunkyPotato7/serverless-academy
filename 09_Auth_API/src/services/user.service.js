@@ -1,4 +1,4 @@
-import pool from '../db/pg.js';
+import pool from '../db/pg.js'
 
 const userService = {
     getById: async (id) => {
@@ -28,4 +28,4 @@ const userService = {
 
 export {
     userService,
-};
+}

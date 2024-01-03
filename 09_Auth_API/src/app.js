@@ -5,9 +5,6 @@ dotenv.config();
 import authRouter from "./routers/auth.router.js";
 import userRouter from "./routers/user.router.js";
 
-//WOW WHAT IS THAT
-//import { authRouter, userRouter } from './routers/index.js';
-
 const app = express();
 
 app.use(express.json());
@@ -24,6 +21,6 @@ app.listen(process.env.PORT, () => {
     console.log(`Server listen on ${process.env.PORT}`);
 });
 
-//TEST
-//TEST
-//TEST
+//1
+
+//2
